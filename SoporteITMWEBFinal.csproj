@@ -121,6 +121,9 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Buscar.jpg" />
+    <Content Include="Imagenes\Editar.png" />
+    <Content Include="Imagenes\Eliminar.png" />
     <Content Include="Paginas\Roles.html" />
     <Content Include="Paginas\Scripts\Roles.js" />
     <Content Include="Paginas\Scripts\Usuarios.js" />
