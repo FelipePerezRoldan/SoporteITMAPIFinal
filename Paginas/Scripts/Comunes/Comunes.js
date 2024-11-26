@@ -1,11 +1,14 @@
-﻿function FormatoMiles(Valor) {
+﻿function FormatoMiles(Valor)
+{
     return "$ " + Intl.NumberFormat('es-CO').format(Valor);
 }
-function FechaHoy() {
+function FechaHoy()
+{
     let now = new Date();
     return now.toISOString().split('T')[0];
 }
-function FechaHoyFormato() {
+function FechaHoyFormato()
+{
     let now = new Date();
     return now.toLocaleDateString();
 }

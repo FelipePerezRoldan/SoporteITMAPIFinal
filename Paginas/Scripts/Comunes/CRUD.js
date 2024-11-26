@@ -1,6 +1,7 @@
 ﻿async function EjecutarServicio(Metodo, url, objeto)
 {
-    try {
+    try
+    {
         const Resultado = await fetch(url,
             {
                 method: Metodo,
@@ -11,11 +12,13 @@
         const Respuesta = await Resultado.json();
         $("#dvMensaje").html(Respuesta);
     }
-    catch (error) {
+    catch (error)
+    {
         $("#dvMensaje").html(error);
     }
 }
-async function EjecutarServicioAuth(Metodo, url, objeto) {
+async function EjecutarServicioAuth(Metodo, url, objeto)
+{
     try {
         let Token = getCookie("token");
         const Resultado = await fetch(url,
@@ -31,11 +34,13 @@ async function EjecutarServicioAuth(Metodo, url, objeto) {
         const Respuesta = await Resultado.json();
         $("#dvMensaje").html(Respuesta);
     }
-    catch (error) {
+    catch (error)
+    {
         $("#dvMensaje").html(error);
     }
 }
-async function EjecutarServicioRpta(Metodo, url, objeto) {
+async function EjecutarServicioRpta(Metodo, url, objeto)
+{
     try {
         const Resultado = await fetch(url,
             {
@@ -53,7 +58,8 @@ async function EjecutarServicioRpta(Metodo, url, objeto) {
         $("#dvMensaje").html(error);
     }
 }
-async function EjecutarServicioRptaAuth(Metodo, url, objeto) {
+async function EjecutarServicioRptaAuth(Metodo, url, objeto)
+{
     try {
         let Token = getCookie("token");
         const Resultado = await fetch(url,
@@ -73,7 +79,8 @@ async function EjecutarServicioRptaAuth(Metodo, url, objeto) {
         $("#dvMensaje").html(error);
     }
 }
-async function ConsultarServicio(url) {
+async function ConsultarServicio(url)
+{
     //Para invocar el servicio, vamos a utilizar el método fetch de javascript, que permite un servicio en una url con unos parámetros definidos
     try {
         let Token = getCookie("token");
@@ -94,7 +101,8 @@ async function ConsultarServicio(url) {
         $("#dvMensaje").html(error);
     }
 }
-async function ConsultarServicioAuth(url) {
+async function ConsultarServicioAuth(url)
+{
     //Para invocar el servicio, vamos a utilizar el método fetch de javascript, que permite un servicio en una url con unos parámetros definidos
     try {
         let Token = getCookie("token");
@@ -115,7 +123,8 @@ async function ConsultarServicioAuth(url) {
         $("#dvMensaje").html(error);
     }
 }
-async function LlenarComboXServicios(URLServicio, ComboLlenar) {
+async function LlenarComboXServicios(URLServicio, ComboLlenar)
+{
     //Debe ir a la base de datos y llenar la información del combo de tipo producto
     //Invocamos el servicio a través del fetch, usando el método fetch de javascript
     try {
@@ -140,7 +149,8 @@ async function LlenarComboXServicios(URLServicio, ComboLlenar) {
         $("#dvMensaje").html(error);
     }
 }
-async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar) {
+async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar)
+{
     //Debe ir a la base de datos y llenar la información del combo de tipo producto
     //Invocamos el servicio a través del fetch, usando el método fetch de javascript
     try {
@@ -158,7 +168,8 @@ async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar) {
         //Se debe limpiar el combo
         $(ComboLlenar).empty();
         //Se recorre en un ciclo para llenar el select con la información
-        for (i = 0; i < Rpta.length; i++) {
+        for (i = 0; i < Rpta.length; i++)
+        {
             $(ComboLlenar).append('<option value=' + Rpta[i].Codigo + '>' + Rpta[i].Nombre + '</option>');
         }
     }
@@ -167,7 +178,8 @@ async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar) {
         $("#dvMensaje").html(error);
     }
 }
-async function LlenarTablaXServicios(URLServicio, TablaLlenar) {
+async function LlenarTablaXServicios(URLServicio, TablaLlenar)
+{
     //Invocamos el servicio a través del fetch, usando el método fetch de javascript
     try {
         const Respuesta = await fetch(URLServicio,
@@ -201,7 +213,8 @@ async function LlenarTablaXServicios(URLServicio, TablaLlenar) {
         $("#dvMensaje").html(error);
     }
 }
-async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
+async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar)
+{
     //Invocamos el servicio a través del fetch, usando el método fetch de javascript
     try {
         let Token = getCookie("token");
@@ -237,7 +250,8 @@ async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
         $("#dvMensaje").html(error);
     }
 }
-function getCookie(cname) {
+function getCookie(cname)
+{
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
