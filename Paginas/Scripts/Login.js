@@ -1,20 +1,25 @@
-﻿async function Ingresar() {
+﻿async function Ingresar()
+{
     let URL = "https://localhost:44323/api/Login/Ingresar";
     const login = new Login($("#txtUsuario").val(), $("#txtClave").val());
     const Respuesta = await EjecutarServicioRpta("POST", URL, login);
     $("#dvMensaje").removeClass("alert alert-success");
     $("#dvMensaje").addClass("alert alert-danger");
-    if (Respuesta == undefined) {
+    if (Respuesta == undefined)
+    {
         document.cookie = "token=0;path=/";
         //Hubo un error al procesar el comando
         $("#dvMensaje").html("El usuario no está registrado u olvidó la clave");
     }
-    else {
-        if (Respuesta.length == 0) {
+    else
+    {
+        if (Respuesta.length == 0)
+        {
             $("#dvMensaje").html("El usuario no está registrado u olvidó la clave");
             return;
         }
-        if (Respuesta[0].Autenticado == true) {
+        if (Respuesta[0].Autenticado == true)
+        {
             const extdays = 5;
             const d = new Date();
             d.setTime(d.getTime() + (extdays * 24 * 60 * 60 * 1000));
@@ -29,13 +34,15 @@
             //alert(Respuesta[0].Perfil);
             window.location.href = Respuesta[0].PaginaInicio;
         }
-        else {
+        else
+        {
             $("#dvMensaje").html("El usuario no tiene permisos");
         }
     }
 }
 class Login {
-    constructor(Usuario, Clave) {
+    constructor(Usuario, Clave)
+    {
         this.Usuario = Usuario;
         this.Clave = Clave;
     }
