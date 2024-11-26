@@ -121,6 +121,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Paginas\Roles.html" />
+    <Content Include="Paginas\Scripts\Roles.js" />
+    <Content Include="Paginas\Scripts\Usuarios.js" />
+    <Content Include="Paginas\Usuarios.html" />
     <Content Include="Paginas\Estilos\adminlte.css" />
     <Content Include="Paginas\Estilos\adminlte.min.css" />
     <Content Include="Paginas\Estilos\all.min.css" />
