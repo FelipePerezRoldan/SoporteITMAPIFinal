@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PRODUCTO</title>
+    <title>SOLICITUD</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link href="Estilos/css/all.min.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
                 <div class="col-md-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">ADMINISTRACIÓN DE PRODUCTOS</h3>
+                            <h3 class="card-title">SOLICITUDES</h3>
                         </div>
                         <form id="frmIncapacidades">
                             <div class="card-body">
@@ -34,40 +34,64 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="txtCodigo">CÓDIGO</label>
-                                                    <input type="text" class="form-control" id="txtCodigo" placeholder="Código del producto">
+                                                    <label for="txtSolicitud">NÚMERO DE SOLICITUD</label>
+                                                    <input type="text" class="form-control" id="txtSolicitud" placeholder="Número de solicitud">
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="txtNombre">NOMBRE</label>
-                                                    <input type="text" class="form-control" id="txtNombre" placeholder="Nombre del producto">
+                                                    <label for="txtTipo">TIPO DE SOLICITUD</label>
+                                                    <input type="text" class="form-control" id="txtTipo" placeholder="Tipo de solicitud">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="txtDescripcion">DESCRIPCIÓN</label>
-                                                    <input type="text" class="form-control" id="txtDescripcion" placeholder="Descripción del producto">
+                                                    <input type="text" class="form-control" id="txtDescripcion" placeholder="Descripción de la solicitud">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="txtCantidad">CANTIDAD</label>
-                                                    <input type="number" class="form-control" id="txtCantidad" placeholder="Cantidad del producto">
+                                                    <label for="txtFechaCreacion">FECHA DE CREACIÓN</label>
+                                                    <input type="number" class="form-control" id="txtFechaCreacion" placeholder="Fecha de creación">
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="txtValorUnitario">VALOR UNITARIO</label>
-                                                    <input type="text" class="form-control" id="txtValorUnitario" placeholder="Valor unitario del producto">
+                                                    <label for="txtFechaResolucion">FECHA DE RESOLUCIÓN</label>
+                                                    <input type="text" class="form-control" id="txtFechaResolucion" placeholder="Fecha de resolución">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtSolicitante">USUARIO SOLICITANTE</label>
+                                                    <input type="text" class="form-control" id="txtSolicitante" placeholder="Usuario solicitante">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtAsignado">USUARIO ASIGNADO</label>
+                                                    <input type="text" class="form-control" id="txtAsignado" placeholder="Asignado a">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtEstado">ESTADO</label>
+                                                    <input type="text" class="form-control" id="txtEstado" placeholder="Estado del equípo">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtCategoria">CATEGORÍA</label>
+                                                    <input type="text" class="form-control" id="txtCategoria" placeholder="Categoría del equipo">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="cboTipoProducto">TIPO PRODUCTO</label>
-                                                    <select id="cboTipoProducto" class="form-control">
+                                                    <label for="cboTipoSolicitud">TIPO SOLICITUD</label>
+                                                    <select id="cboTipoSolicitud" class="form-control">
                                                         <option value="0">SELECCIONAR</option>
                                                     </select>
                                                 </div>
@@ -93,16 +117,19 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <table id="tblProductos" class="table table-bordered table-striped" style="width:100%;">
+                                                <table id="tblSolicitudes" class="table table-bordered table-striped" style="width:100%;">
                                                     <thead>
                                                         <tr>
-                                                            <th>Cod. Tipo producto</th>
-                                                            <th>Tipo producto</th>
-                                                            <th>Código producto</th>
-                                                            <th>Producto</th>
+                                                            <th>Número de solicitud</th>
+                                                            <th>Tipo Solicitud</th>
+                                                            <th>Titulo</th>
                                                             <th>Descripción</th>
-                                                            <th>Cantidad</th>
-                                                            <th>Valor Unitario</th>
+                                                            <th>Fecha de Creación</th>
+                                                            <th>Fecha de Resolución</th>
+                                                            <th>Solicitante</th>
+                                                            <th>Asignado a</th>
+                                                            <th>Estado</th>
+                                                            <th>Categoría</th>
                                                         </tr>
                                                     </thead>
                                                 </table>
