@@ -1,6 +1,13 @@
-﻿async function Ingresar()
+﻿class Login {
+    constructor(Usuario, Clave)
+    {
+        this.Usuario = Usuario;
+        this.Clave = Clave;
+    }
+}
+async function Ingresar()
 {
-    let URL = "https://localhost:44323/api/Login/Ingresar";
+    let URL = https://localhost:44391/api/Login/Ingresar";
     const login = new Login($("#txtUsuario").val(), $("#txtClave").val());
     const Respuesta = await EjecutarServicioRpta("POST", URL, login);
     $("#dvMensaje").removeClass("alert alert-success");
@@ -38,12 +45,5 @@
         {
             $("#dvMensaje").html("El usuario no tiene permisos");
         }
-    }
-}
-class Login {
-    constructor(Usuario, Clave)
-    {
-        this.Usuario = Usuario;
-        this.Clave = Clave;
     }
 }
