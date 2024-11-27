@@ -125,6 +125,9 @@
     <Content Include="Imagenes\Editar.png" />
     <Content Include="Imagenes\Eliminar.png" />
     <Content Include="Paginas\Login.html" />
+    <Content Include="Paginas\Scripts\Menu.js" />
+    <Content Include="Paginas\Scripts\Solicitudes.js" />
+    <Content Include="Paginas\Solicitudes.html" />
     <Content Include="Paginas\Roles.html" />
     <Content Include="Paginas\Scripts\Comunes\Comunes.js" />
     <Content Include="Paginas\Scripts\Comunes\CRUD.js" />
